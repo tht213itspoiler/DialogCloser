@@ -13,76 +13,101 @@
        	Service:DialogService.IsRegisteredView="True"
         >
     <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="*" />
-    </Grid.RowDefinitions>
-
-    <Menu IsMainMenu="True" Grid.Row="0">
-      <MenuItem Header="_File" Margin="3">
-        <MenuItem Command="cmd:AppCommand.ShowDialog" Margin="3" />
-        <Separator />
-        <MenuItem Command="cmd:AppCommand.Exit" Margin="3" />
-      </MenuItem>
-    </Menu>
-
-    <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-      <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-        <RowDefinition Height="Auto" />
-        <RowDefinition Height="Auto" />
-      </Grid.RowDefinitions>
-
-      <Grid>
         <Grid.RowDefinitions>
-          <RowDefinition Height="Auto" />
-          <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
-        <Button Content="Show Dialog"
+
+        <Menu IsMainMenu="True" Grid.Row="0">
+            <MenuItem Header="_File" Margin="3">
+                <MenuItem Command="cmd:AppCommand.ShowDialog" Margin="3" />
+                <Separator />
+                <MenuItem Command="cmd:AppCommand.Exit" Margin="3" />
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!--<Button Content="Show Dialog"
                 Command="cmd:AppCommand.ShowDialog"
-                Margin="6" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
-      </Grid>
+                Margin="6" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
 
-      <Separator Grid.Row="1" Margin="12" />
+                <ToolBar Height="40" >
+                    <Button Background="Pink" Margin="0,-3,0,-2" Height="40">
+                        <!--<StackPanel>-->
+                        <Image Source="../microsoft-sharepoint-icon-24.jpg" 
+                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                   Width="30"
+                                   Height="30"/>
+                        <!--<TextBlock>Disconnect from Server</TextBlock>-->
+                        <!--</StackPanel>-->
+                    </Button>
+                    <Button Height="31" Margin="0,6,0,-2">Open</Button>
+                </ToolBar>
 
-      <StackPanel Grid.Row="2">
-        <TextBlock TextWrapping="Wrap" Margin="6">
+                <ToolBarTray>
+                    <ToolBar x:Name="toolBar" ToolBarTray.IsLocked="True" IsOverflowOpen="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Margin="0,0,-89,0">
+                        <Button BorderBrush="Black" Content="READ" Height="45" Margin="0,-2,0,-3" />
+
+                        <ToolBar.Resources>
+                            <Style x:Key="ToolBarMainPanelBorderStyle" TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0,0,0,0"/>
+                            </Style>
+                        </ToolBar.Resources>
+                    </ToolBar>
+                </ToolBarTray>
+            </Grid>
+
+            <Separator Grid.Row="1" Margin="12" />
+
+            <StackPanel Grid.Row="2">
+                <TextBlock TextWrapping="Wrap" Margin="6">
 This application also show cases an exit operation that is implemented with an attached behaviour and/or viewmodel event driven request.
 Attempt to close the application:
-        </TextBlock>
-        <Grid Margin="15">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-          </Grid.ColumnDefinitions>
+                </TextBlock>
+                <Grid Margin="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
 
-          <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-          </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-          <Ellipse Stroke="Black" Fill="Black" Width="10"  Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" />
-          <TextBlock Grid.Row="0" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Left">with Close button in Window</TextBlock>
+                    <Ellipse Stroke="Black" Fill="Black" Width="10"  Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" />
+                    <TextBlock Grid.Row="0" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Left">with Close button in Window</TextBlock>
 
-          <Ellipse  Grid.Row="1" Grid.Column="0" Stroke="Black" Fill="Black" Width="10"  Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" />
-          <TextBlock Grid.Row="1" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Left">ALT+F4</TextBlock>
+                    <Ellipse  Grid.Row="1" Grid.Column="0" Stroke="Black" Fill="Black" Width="10"  Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Grid.Row="1" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Left">ALT+F4</TextBlock>
 
-          <Ellipse  Grid.Row="2" Grid.Column="0" Stroke="Black" Fill="Black" Width="10"  Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" />
-          <TextBlock Grid.Row="2" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Left">File>Exit</TextBlock>
+                    <Ellipse  Grid.Row="2" Grid.Column="0" Stroke="Black" Fill="Black" Width="10"  Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Left">File>Exit</TextBlock>
 
-          <Ellipse  Grid.Row="3" Grid.Column="0" Stroke="Black" Fill="Black" Width="10"  Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" />
-          <TextBlock Grid.Row="3" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Left">Windows Shutdown</TextBlock>
-        </Grid>
-        <TextBlock Margin="6">without checking the checkbox below.</TextBlock>
-        <TextBlock TextWrapping="Wrap" Margin="6">
+                    <Ellipse  Grid.Row="3" Grid.Column="0" Stroke="Black" Fill="Black" Width="10"  Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Grid.Row="3" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Left">Windows Shutdown</TextBlock>
+                </Grid>
+                <TextBlock Margin="6">without checking the checkbox below.</TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="6">
           <TextBlock FontWeight="Bold">Expectation</TextBlock>: The application does not close unless the checkbox is checked.
         </TextBlock>
-        <CheckBox Content="Application is ready to close" Margin="6" IsChecked="{Binding IsReadyToClose}" />
-      </StackPanel>
+                <CheckBox Content="Application is ready to close" Margin="6" IsChecked="{Binding IsReadyToClose}" />
+            </StackPanel>
+        </Grid>
     </Grid>
-  </Grid>
 </Window>
 
