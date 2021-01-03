@@ -1,0 +1,65 @@
+﻿<Window x:Class="DialogCloser.View.UsernameDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        Title="{Binding DisplayName}"
+        
+        Height="400" Width="650"
+        SizeToContent="Height"
+        ResizeMode="NoResize"
+
+        xmlns:cmd="clr-namespace:DialogCloser"
+        xmlns:behav="clr-namespace:DialogCloser.Behaviour"
+
+        behav:DialogCloser.DialogResult="{Binding OpenCloseView.WindowCloseResult}"
+        >
+  <Window.Resources>
+    <!--<conv:CountToVisibilityHiddenConverter x:Key="CountToVisibilityHidden" />-->
+  </Window.Resources>
+    <Grid Margin="9">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Grid.Row="1">
+      <!--<StackPanel Visibility="{Binding OpenCloseView.ListMessages.Count, Converter={StaticResource CountToVisibilityHidden}}" Height="85">
+        <TextBlock Text="{Binding OpenCloseView.ProblemCaption}"
+                   TextWrapping="Wrap" Margin="3" />
+
+        <ListBox DataContext="{Binding OpenCloseView}"
+                     ItemsSource="{Binding ListMessages}" MaxHeight="65"
+                     BorderBrush="Transparent"
+                     Background="Transparent"
+                     Grid.Row="1"
+                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+          <ListBox.ItemTemplate>
+            <DataTemplate>
+              <StackPanel Orientation="Horizontal" ToolTip="{Binding MessageType}">
+                <Image Source="{Binding CategoryOfMsg, Converter={StaticResource MsgTypeToResource}}"
+                       Width="16" Margin="3" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock Text="{Binding Message}" Margin="3" HorizontalAlignment="Left" VerticalAlignment="Center" />
+              </StackPanel>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+      </StackPanel>-->
+
+      <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.IsSharedSizeScope="True">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" SharedSizeGroup="StandardButtons" />
+          <ColumnDefinition Width="Auto" SharedSizeGroup="StandardButtons"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="_Cancel"
+              Command="{Binding OpenCloseView.CancelCommand}"
+              IsCancel="True"
+              Grid.Column="0" Margin="3" Padding="3"/>
+
+        <Button Content="_OK"
+              Command="{Binding OpenCloseView.OKCommand}"
+              IsDefault="True"
+              Grid.Column="1" Margin="3" Padding="3"/>
+      </Grid>
+    </StackPanel>
+  </Grid>
+</Window>

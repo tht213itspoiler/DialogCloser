@@ -1,0 +1,16 @@
+G:\dialogcloser\obj\Debug\View\MainWindow.g.cs
+G:\dialogcloser\obj\Debug\View\UsernameDialog.g.cs
+G:\dialogcloser\obj\Debug\App.g.cs
+G:\dialogcloser\obj\Debug\GeneratedInternalTypeHelper.g.cs
+G:\dialogcloser\obj\Debug\DialogCloser_MarkupCompile.cache
+G:\dialogcloser\obj\Debug\DialogCloser_MarkupCompile.lref
+G:\dialogcloser\bin\Debug\DialogCloser.exe
+G:\dialogcloser\bin\Debug\DialogCloser.pdb
+G:\dialogcloser\obj\Debug\View\MainWindow.baml
+G:\dialogcloser\obj\Debug\View\UsernameDialog.baml
+G:\dialogcloser\obj\Debug\DialogCloser.g.resources
+G:\dialogcloser\obj\Debug\DialogCloser.Properties.Resources.resources
+G:\dialogcloser\obj\Debug\DialogCloser.csproj.GenerateResource.cache
+G:\dialogcloser\obj\Debug\DialogCloser.csproj.CoreCompileInputs.cache
+G:\dialogcloser\obj\Debug\DialogCloser.exe
+G:\dialogcloser\obj\Debug\DialogCloser.pdb
